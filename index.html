@@ -3,26 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My Portfolio | Home </title>
+    <title> We Love Hong Kong | Home </title>
     <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <ul class="flex border-b">
-        <li class="-mb-px mr-1">
-          <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="index.html">Main</a>
-        </li>
-        <li class="mr-1">
-          <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="about.html">About Me</a>
-        </li>
-        <li class="mr-1">
-          <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="family.html">My Family</a>
-        </li>
-        <li class="mr-1">
-          <a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="contact.html">Contact Me</a>
-        </li>
-      </ul>
-    <h1 class="header_main">Vanessa's Portfolio</h1>
-    <p class="paragraph_main">Here you can get to know more about me</p>
+  <!-- Header Tab -->
+       <!-- AlpineJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
+
+<!-- Slider Component Container -->
+<div class="flex flex-col items-center justify-center mt-32" x-cloak x-data="appData()" x-init="appInit()">
+    <div class="flex flex-col">
+
+        <!-- Navbar -->
+        <nav class="flex justify-around py-4 bg-white/80
+            backdrop-blur-md shadow-md w-full
+            fixed top-0 left-0 right-0 z-10">
+           
+            <!-- Logo Container -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a class="cursor-pointer">
+                    <h3 class="text-2xl font-medium text-blue-500">
+                        <img class="h-20 object-cover"
+                            src="https://www.ahui3c.com/wp-content/uploads/2019/08/2019062215315794183_thumb.jpg" alt="HK_Logo">
+                    </h3>
+                </a>
+            </div>
+
+            <!-- Links Section -->
+            <div class="items-center hidden space-x-8 lg:flex">
+                <a class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300 font-semibold" href="index.html">
+                    About Hong Kong
+                </a>
+
+                <a class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300 font-semibold" href="about.html">
+                    Attractions
+                </a>
+
+                <a class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300 font-semibold">
+                    Reason We Love this Place
+                </a>
+
+                <a class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300 font-semibold">
+                    Contact Us
+                </a>
+
+            </div>
+        </nav>
+    </div>
+
+
+<!-- Carousel -->
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+<article x-data="slider" class="relative w-full flex flex-shrink-0 overflow-hidden shadow-2xl">
+    <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
+        <span x-text="currentIndex"></span>/
+        <span x-text="images.length"></span>
+    </div>
+
+    <template x-for="(image, index) in images">
+        <figure class="Carousel_image" x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300"
+        x-transition:enter-start="opacity-70" x-transition:enter-end="opacity-70"
+        x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0">
+        <img :src="image" alt="Image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-60" />
+        <figcaption class="text-white text opacity-60 font-semibold hover:italic font-serif text-6xl absolute inset-x-0 bottom-3 z-20 mx-auto p-4 text-center tracking-widest leading-snug">
+          Unique Hong Kong
+        </figcaption>
+        </figure>
+    </template>
+
+    <button @click="back()"
+        class="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+            </path>
+        </svg>
+    </button>
+
+    <button @click="next()"
+    class="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+</article>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('slider', () => ({
+            currentIndex: 1,
+            images: [
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Hong_Kong_at_night.jpg/2300px-Hong_Kong_at_night.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kowloon_Panorama_by_Ryan_Cheng_2010.jpg/3200px-Kowloon_Panorama_by_Ryan_Cheng_2010.jpg',
+                'https://images.unsplash.com/photo-1558101575-88967022e3a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
+                'https://images.unsplash.com/photo-1524192698664-98b8f3f927e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
+                'https://images.unsplash.com/photo-1549167008-e8fda15b1710?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80'
+            ],
+            back() {
+                if (this.currentIndex > 1) {
+                    this.currentIndex = this.currentIndex - 1;
+                }
+            },
+            next() {
+                if (this.currentIndex < this.images.length) {
+                    this.currentIndex = this.currentIndex + 1;
+                } else if (this.currentIndex <= this.images.length){
+                    this.currentIndex = this.images.length - this.currentIndex + 1
+                }
+            },
+        }))
+    })
+</script>
+</div>
+<!-- Content -->
+<div><p class="mt-5 mx-20 text-2xl font-serif text-center">As a result of Hong Kong’s unique geography and history, neighbourhoods can be vastly different from one another, and all have their own unique history, culture, and experiences waiting for you to explore.</p>
+    </div>
+<div class="grid grid-cols-1 md:grid-cols-2 mx-20 mt-5 font-serif">
+  
+  <main><img src="https://c2.staticflickr.com/8/7232/7383524182_8729a8d308_b.jpg" alt="hksar_flag"></main>
+  <main><p class="align-middle mx-5 mt-5">Hong Kong, officially the Hong Kong Special Administrative Region of the People's Republic of China, is a city and a special administrative region in China. With 7.4 million residents of various nationalities in a 1,104-square-kilometre (426 sq mi) territory, Hong Kong is one of the most densely populated territories in the world.Originally a sparsely populated area of farming and fishing villages, the territory is now one of the world's most significant financial centres and commercial ports. Hong Kong is the world's fourth-ranked global financial centre, ninth-largest exporter, and eighth-largest importer. Despite having the largest number of skyscrapers of any city in the world, housing in Hong Kong has been well-documented to experience a chronic persistent shortage.
+    Hong Kong is a highly developed territory and has a Human Development Index (HDI) of 0.952, ranking fourth in the world. The city has the second highest life expectancy in the world, and a public transport rate exceeding 90%.</p></main>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 mx-20 mt-5 font-serif">
+<main><p class="align-middle mx-5 mt-5">Hong Kong has a humid subtropical climate, characteristic of southern China, despite being located south of the Tropic of Cancer. Summers are long, hot and humid, with occasional showers and thunderstorms and warm air from the southwest. The humid nature of Hong Kong exacerbates the warmth of summer. Typhoons occur most often then, sometimes resulting in floods or landslides. Winters are short, mild and usually sunny at the beginning, becoming cloudy towards February. Frequent cold fronts bring strong, cooling winds from the north and occasionally result in chilly weather. Autumn is the sunniest season, whilst spring is generally cloudy. Historic temperature extremes at the Hong Kong Observatory are 36.6 °C (97.9 °F) on 22 August 2017 and 0.0 °C (32.0 °F) on 18 January 1893. </p></main>
+<main><img src="https://images.unsplash.com/photo-1686063943764-0512c7936303?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="hk_raining"></main>
+</div>
+
+<!-- This is footer -->
+<div class="max-w-2xl mx-auto">
+
+	<footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-20">
+		<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©Hong Kong</a>. All Rights Reserved.
+    </span>
+		<ul class="flex flex-wrap items-center mt-3 sm:mt-0">
+			<li>
+				<a href="index.html" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">About HK</a>
+			</li>
+			<li>
+				<a href="about.html" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Attractions</a>
+			</li>
+				<li>
+				<a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact Us</a>
+			</li>
+		</ul>
+	</footer>
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+  class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold transition-colors duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+  </svg>
+  <span class="sr-only">Go to top</span>
+</button>
+
+<script>
+  // Get the 'to top' button element by ID
+  var toTopButton = document.getElementById("to-top-button");
+
+  // Check if the button exists
+  if (toTopButton) {
+
+      // On scroll event, toggle button visibility based on scroll position
+      window.onscroll = function() {
+          if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              toTopButton.classList.remove("hidden");
+          } else {
+              toTopButton.classList.add("hidden");
+          }
+      };
+
+      // Function to scroll to the top of the page smoothly
+      window.goToTop = function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      };
+  }
+
+</div>
 </body>
 </html>
