@@ -10,191 +10,145 @@
 
 <body>
  <!--navbar-->
- <nav class="lg:px-16 px-6 bg-white shadow-md flex flex-wrap items-center lg:py-0 py-2">
-    <div class="flex-1 flex justify-between items-center">
-      <a href="/" class="flex text-lg font-semibold">
-        <img
-          src="https://www.ahui3c.com/wp-content/uploads/2019/08/2019062215315794183_thumb.jpg"
-          width="100"
-          height="300"
-          class="p-2"
-          alt="Hong Kong Logo"
-        />
-      </a>
-    </div>
-    <label for="menu-toggle" class="cursor-pointer lg:hidden block">
-      <svg
-        class="fill-current text-gray-900"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-      >
-        <title>menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </label>
-    <input class="hidden" type="checkbox" id="menu-toggle" />
-    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
-      <nav>
-        <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex  lg:pt-0">
-          <li class="py-2 lg:py-0 ">
-            <a
-              class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400"
-              href="index.html"
-            >
-              About Hong Kong
+
+ <div class="h-24 bg-white">
+  <nav class="flex px-4 border-b md:shadow-lg items-center relative">
+      <div class="text-lg font-bold md:py-0 py-4">
+          <img src="https://www.ahui3c.com/wp-content/uploads/2019/08/2019062215315794183_thumb.jpg" alt="Logo" width="100"
+          height="300" class="p-2">
+      </div>
+      <ul class="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0">
+          <li>
+              <a href="index.html" class="flex md:inline-flex p-4 items-center hover:text-blue-500">
+                  <span>About Hong Kong</span>
+              </a>
+          </li>
+          <li>
+              <a href="about.html" class="flex md:inline-flex p-4 items-center hover:text-blue-500">
+                  <span>Attractions</span>
+              </a>
+              <a href="reason.html" class="flex md:inline-flex p-4 items-center hover:text-blue-500">
+                <span>Reasons We Love HK</span>
             </a>
           </li>
-          <li class="py-2 lg:py-0 ">
-            <a
-              class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400"
-              href="about.html"
-            >
-              Attractions
-            </a>
+          
+              <a href="contact.html" class="flex md:inline-flex p-4 items-center hover:text-blue-500">
+                  <span>Contact Us</span>
+              </a>
           </li>
-          <li class="py-2 lg:py-0 ">
-            <a
-              class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400"
-              href="reason.html"
-            >
-              Reasons We Love HK
-            </a>
-          </li>
-          <li class="py-2 lg:py-0 ">
-            <a
-              class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400"
-              href="contact.html"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      </ul>
+      <div class="ml-auto md:hidden text-gray-500 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+      </div>
   </nav>
+</div>
+
 
 <!-- content -->
-   <main class="ease-in-out hover:scale-105 mt-10 mx-20 rounded-md bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white"></div>
-<p class="grid grid-cols-1 md:grid-cols-2 mx-20 mt-10 text-2xl font-serif">Places to visit in</p>
-<h1 class="mt-2 mx-20 text-4xl font-serif text-left">Hong Kong</h1>
-<p class="grid grid-cols-1 md:grid-cols-full mx-20 mt-2 font-serif">For somewhere that's home to more than 7 million people and 260 islands, fast-paced is an understatement.</p>
-</main>
+<main class="ease-in-out hover:scale-105 mt-10 mx-20 rounded-md bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white"></div>
+  <p class="grid grid-cols-1 md:grid-cols-2 mx-20 mt-10 text-2xl font-serif">Places to visit in</p>
+  <h1 class="mt-2 mx-20 text-4xl font-serif text-left">Hong Kong</h1>
+  <p class="grid grid-cols-1 md:grid-cols-full mx-20 mt-2 font-serif">For somewhere that's home to more than 7 million people and 260 islands, fast-paced is an understatement.</p>
+  </main>
 
-<!-- card list row 1-->
-<div class="mt-5 mx-20 grid drid-cols-1 md: grid-cols-2 lg: grid-cols-3 h-fit">
-<nav class="mt-5 mx-10 text-center">
-    <div
-  class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-  <div class="relative overflow-hidden bg-cover bg-no-repeat">
-    <img
-      class="rounded-t-lg"
-      src="https://images.unsplash.com/photo-1655607378065-28fdb187a0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"
-      alt="hk disneyland" />
-  </div>
-  <div class="p-6">
-    <p class="text-base text-neutral-600 dark:text-neutral-200">
-        Hong Kong Disneyland is a great day out for everyone. The rides vary from kid-friendly ones to the extreme thrillers.
-    </p>
-  </div>
-</div>
-</nav>
-
-<main class="mt-5 mx-10 text-center">
-    <div
-    class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-    <div class="relative overflow-hidden bg-cover bg-no-repeat">
-      <img
-        class="rounded-t-lg"
-        src="https://images.unsplash.com/photo-1597472363542-bb534eab3223?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-        alt="star ferry" />
-    </div>
-    <div class="p-6">
-      <p class="text-base text-neutral-600 dark:text-neutral-200">
-        As gleaming towers rose from the historical architectures, Star Ferry has voyaged between Islands for 120 years.
-      </p>
-    </div>
-  </div>
-</main>
-
-<nav class="mt-5 mx-10 text-center">
-    
-
-    <div
-    class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-    <div class="relative overflow-hidden bg-cover bg-no-repeat">
-      <img
-        class="rounded-t-lg"
-        src="https://images.unsplash.com/photo-1605601528186-b4967b7be9d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2934&q=80"
-        alt="Tai O" />
-    </div>
-    <div class="p-6">
-      <p class="text-base text-neutral-600 dark:text-neutral-200">
-        Tai O is home to many relaxing cafes serving tea, coffee & snacks, some of which have tables overlooking the water. 
-      </p>
-    </div>
-  </div>
-</nav>
-</div>
-
-
-<!-- card list row 2-->
-<div class="mt-5 mx-20 grid drid-cols-1 md: grid-cols-2 lg: grid-cols-3 h-fit">
-    <nav class="mt-5 mx-10 text-center">
-        <div
-      class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-      <div class="relative overflow-hidden bg-cover bg-no-repeat">
+  
+<!--photos-->
+<div class="container mx-auto p-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+      <div>
         <img
-          class="rounded-t-lg"
-          src="https://th.bing.com/th/id/R.470640ebea5be59701ac5d9a6bf705a5?rik=lPKUR%2bDMjo0iSg&pid=ImgRaw&r=0"
-          alt="the peak" />
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1655607378065-28fdb187a0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"
+          alt="hk disneyland"
+        />
       </div>
-      <div class="p-6">
-        <p class="text-base text-neutral-600 dark:text-neutral-200">
-            Hike up to the Peak Galleria — along with classic picture-postcard skyline views across both sides of Victoria Harbour.
-        </p>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1509714895131-1bae78698b3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2944&q=80"
+          alt="hk stanley"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg" 
+          src="https://images.unsplash.com/photo-1518599807935-37015b9cefcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+          alt="hk skyline"
+        />
       </div>
     </div>
-    </nav>
-    
-    <main class="mt-5 mx-10 text-center">
-        <div
-        class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-        <div class="relative overflow-hidden bg-cover bg-no-repeat">
-          <img
-            class="rounded-t-lg"
-            src="https://images.unsplash.com/photo-1619437212695-f13fb47f43f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-            alt="HK Big Buddha" />
-        </div>
-        <div class="p-6">
-          <p class="text-base text-neutral-600 dark:text-neutral-200">
-            Take 268 steps to the Big Buddha, a 34 m-tall bronze statue and explore the nearby Po Lin Monastery. 
-          </p>
-        </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1663060076297-65307514a712?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"
+          alt="hk hiking trail"
+        />
       </div>
-    </main>
-    
-    <nav class="mt-5 mx-10 text-center">
-        
-    
-        <div
-        class="hover:shadow-lg block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-        <div class="relative overflow-hidden bg-cover bg-no-repeat">
-          <img
-            class="rounded-t-lg"
-            src="https://discovery.cathaypacific.com/wp-content/uploads/2020/02/Seventh-Son_SSR-Food-_Dim-Sum.jpg"
-            alt="dim sum" />
-        </div>
-        <div class="p-6">
-          <p class="text-base text-neutral-600 dark:text-neutral-200">
-            No trip to Hong Kong is complete without trying dim sum - bite-sized snacks that are shared over tea. 
-          </p>
-        </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1689819883958-9bf3e3c1fee9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2901&q=80"
+          alt="hk restaurant"
+        />
       </div>
-    </nav>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1616523815857-b2e0b610c13f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2952&q=80"
+          alt="hk big buddha"
+        />
+      </div>
     </div>
-
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1502639446168-0a1124e06354?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2866&q=80"
+          alt="hk housing"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1605601528186-b4967b7be9d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2934&q=80"
+          alt="hk Tai O"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1594169122551-0c8aa5f4c055?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
+          alt="hk night time"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1551757092-7f33a0256361?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
+          alt="hk xiqu center"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://images.unsplash.com/photo-1690263214701-2fff97cc54c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
+          alt="hk star ferry"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg hover:shadow-lg"
+          src="https://th.bing.com/th/id/R.470640ebea5be59701ac5d9a6bf705a5?rik=lPKUR%2bDMjo0iSg&pid=ImgRaw&r=0""
+          alt="the peak hk"
+        />
+      </div>
+    </div>
+  </div>
+</div>
   <!-- This is footer -->
 <div class="max-w-2xl mx-auto">
 
@@ -209,7 +163,7 @@
 				<a href="about.html" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Attractions</a>
 			</li>
 				<li>
-				<a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact Us</a>
+				<a href="contact.html" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact Us</a>
 			</li>
 		</ul>
 	</footer>
