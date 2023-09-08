@@ -10,7 +10,7 @@
 
 <body>
 <!--navbar-->
-<header class="bg-black header sticky top-0 shadow-md flex items-center justify-between px-8 py-02 h-24">
+<header class="bg-black shadow-md flex items-center justify-between px-8 py-02 h-24">
   <!-- logo -->
   <h1 class="w-40">
          <img src ="https://i.ytimg.com/vi/o__p1GzO4QU/maxresdefault.jpg" alt="hk logo">
@@ -38,6 +38,7 @@
 <img class="opacity-60" src="https://th.bing.com/th/id/R.5d3bbbf6443a676f63083717385eb2b4?rik=uKWSnb0Hewkmmw&riu=http%3a%2f%2fwww.quickvisa.in%2fwp-content%2fuploads%2f2017%2f10%2fcontactus-banner.jpg&ehk=OkTMcS2WAhQjZ3Irkt6q%2bS42nLwvZrC3HWHxBx23IUY%3d&risl=&pid=ImgRaw&r=0" alt="contact us">
 
 <!-- contact form -->
+<form action="mailto:fong_vanessa@hotmail.com"></form>
 <div class="mt-10 mx-auto max-w-[1920px] px-4 md:px-8 2xl:px-16">
   <div class="md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
     <div class="flex pb-7 md:pb-9 mt-7 md:-mt-1.5">
@@ -67,7 +68,7 @@
               autoComplete="off"
               spellCheck="false"
               aria-invalid="false"
-              required>
+             >
           </div>
           <div class="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
             <label
@@ -79,7 +80,8 @@
             <input
               id="email"
               name="email"
-              type="email"
+              type="email" required 
+              pattern="[^ @]*@[^ @]*"
               placeholder="Enter Your Email"
               class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
               autoComplete="off"
@@ -127,7 +129,7 @@
           <button
             data-variant="flat"
             class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
-            type="submit"
+            type="submit" value="send"
           >
             Send Message
           </button>
